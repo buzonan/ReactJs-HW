@@ -17,7 +17,7 @@ class CounterGroup extends Component {
         const size = this.props.size;
         const counterSizeArray = this.initArray(size);
         const counterArray = counterSizeArray.map((value) => (
-            <Counter key={value} sum={this.props.sum} />   
+            <Counter key={value} total={this.props.total} />   
         ));
         return (
             <div>
