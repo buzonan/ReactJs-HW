@@ -11,6 +11,10 @@ class Counter extends Component {
             number: 0,
         }
     }
+
+    componentWillUnmount(){
+        this.props.total(0 - this.state.number);
+    }
     
     onIncrease(){
         this.setState((prevState) => ({number: prevState.number + 1}), ()=>{this.props.total(1)});
