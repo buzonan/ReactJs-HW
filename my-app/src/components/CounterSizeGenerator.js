@@ -22,15 +22,16 @@ class CounterSizeGenerator extends Component {
 
     render() {
         return (
-            <fieldset>
+            <div>
                 <label htmlFor="size">size: </label>
                 <input 
-                type="number" 
-                name="size" 
-                id="size" 
-                value = {this.state.size} 
-                onChange={this.onChange}/>
-            </fieldset>           
+                        type="number" sa
+                        name="size" 
+                        id="size" 
+                        value = {this.state.size} 
+                        onChange={this.onChange}
+                />
+            </div> 
         );
     }
 }

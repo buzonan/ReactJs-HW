@@ -9,20 +9,19 @@ class CounterGroup extends Component {
     }
     
     initArray(size){
-        const number = size.length > 0 ? parseInt(size) : 0;
+        const number = size.length > 0 &&  parseInt(size) > 0 ? parseInt(size) : 0;
         return Array.from(Array(number).keys());
     }
 
     render() {
         const size = this.props.size;
-        // const {size} = this.props;
         const counterSizeArray = this.initArray(size);
+        const counterArray = counterSizeArray.map((value) => (
+            <Counter key={value} sum={this.props.sum} />   
+        ));
         return (
             <div>
-                { counterSizeArray.map((value) => (
-                    <Counter key={value} />   
-                ))
-         }
+                { counterArray }
             </div>
         );
     }
