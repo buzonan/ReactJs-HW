@@ -7,7 +7,7 @@ class MultiCounter extends Component {
     constructor(props) {
         super(props);
         
-        this.onGenerate = this.onGenerate.bind(this);
+        this.onGenerateCounters = this.onGenerateCounters.bind(this);
         this.onCalculateTotal = this.onCalculateTotal.bind(this);
 
         this.state = {
@@ -16,7 +16,7 @@ class MultiCounter extends Component {
         };
     }
 
-    onGenerate(size){
+    onGenerateCounters(size){
         this.setState({size});
     }
 
@@ -28,7 +28,7 @@ class MultiCounter extends Component {
         return (
             <div>
                 <fieldset>
-                <CounterSizeGenerator onGenerate={this.onGenerate}/>
+                <CounterSizeGenerator onGenerateCounters={this.onGenerateCounters}/>
                 <CounterGroupSum total={this.state.total}/>
                 </fieldset>
                 <fieldset>

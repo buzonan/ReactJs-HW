@@ -17,7 +17,7 @@ class CounterSizeGenerator extends Component {
         const value = event.target.value;
         this.setState(() => {
             return {size: value};
-        }, () => this.props.onGenerate(value));
+        }, () => this.props.onGenerateCounters(value));
     }
 
     render() {
