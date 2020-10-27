@@ -4,7 +4,7 @@ class CounterGroupSum extends Component {
     render() {
         return (
             <div>
-                The Sum of all counters is {this.props.total}
+                The Sum of all counters is {this.props.sum}
             </div>
         );
     }
