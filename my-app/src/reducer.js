@@ -1,12 +1,21 @@
 import {combineReducers} from 'redux';
 
 const size = (state = 0, action) => {
-    if(action.type === "UPDATE_COUNTER_SIZE"){
+    if(action.type === "INCREASE_COUNTER_SIZE"){
     return action.payload;    
 }
     return state;
 }
 
+const sum = (state = 0, action) => {
+    if(action.type === "INCREASE_TOTAL"){
+    return state + 1; 
+}
+    return state;
+}
+
+
 export default combineReducers({
-    size
+    size,
+    sum
 })
